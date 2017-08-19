@@ -19,24 +19,66 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
+  font-family: $opensans;
+  font-weight: 300;
   color: $darkGray;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+// start new styles
+
+.full-bg-lemons {
+  background-image: url('images/lemons.jpg');
+  background-size: cover;
+
+  @include mobile {
+    background-position: -160px 130px;
+  }
+
 }
 
 .container {
   margin: 0 auto;
-  max-width: 740px;
+  max-width: 90%;
   padding: 0 10px;
   width: 100%;
+  text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
-  color: $darkerGray;
-  font-weight: bold;
+.temp-content {
+  margin-top: 110px;
 
-  line-height: 1.7;
-  margin: 1em 0 15px;
+  @include mobile {
+    margin-top: 60px;
+  }
+
+}
+
+.text-right {
+  text-align: right;
+}
+
+.temp-p {
+  font-size: 20px;
+  margin-top: 390px;
+
+  @include mobile {
+    margin-top: 330px;
+    font-size: 18px;
+  }
+
+}
+
+// end new styles
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $opensans;
+  color: $darkerGray;
+
+  line-height: 1.3;
+  margin: 0 0 15px 15px;
   padding: 0;
 
   @include mobile {
@@ -45,14 +87,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 64px;
+  color: #000000;
+
+  @include mobile {
+    font-size: 42px;
+  }
+
   a {
     color: inherit;
   }
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 64px;
+  color: $yellow;
+  font-weight: 400;
+
+  @include mobile {
+    font-size: 32px;
+  }
+
 }
 
 h3 {
